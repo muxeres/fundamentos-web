@@ -1,0 +1,312 @@
+@import url('https://fonts.cdnfonts.com/css/mistic-terror');
+@import url('https://fonts.cdnfonts.com/css/taper-straight');
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+@import url('https://fonts.cdnfonts.com/css/tertre');
+@import url('https://fonts.cdnfonts.com/css/brandford');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("fondo.jpg"); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(5px);
+    font-family: Stencil Std, fantasy;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 36px;
+    font-family: 'Brandford', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    margin-top: 50px; /* Espacio para el navbar */
+}
+
+.menu {
+    width: 200px;
+    background-color: black;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-family: 'Tertre Med', sans-serif;
+}
+
+.menu a:hover {
+    background-color: #555;
+}
+
+.conteudo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+.conteudo iframe.jan {
+    width: 80%;
+    height: 80%;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+}
+
+.conteudo p {
+    padding-top: 1%;
+    text-align: center;
+    font-size: 90pt;
+    font-family: 'Low Gun Screen', sans-serif;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #0f1111;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+p {
+    padding-top: 1%;
+    font-family: 'Noto Serif Display', fantasy;
+    text-align: center;
+}
+
+/* Ajustar estilos del checkmark */
+label .checkmark {
+    display: inline-block;
+    width: 20px; /* Ancho del checkmark */
+    height: 20px; /* Alto del checkmark */
+    margin-right: 5px; 
+    position: relative;
+    top: 5px; /* Ajusta según sea necesario para alinear verticalmente */
+}
+h1{
+    font-family: 'Taper Straight', sans-serif;
+    text-align: center;
+    font-size: 80px;
+
+}
+/* Estilos adicionales de botones y otros elementos */
+p label, p input {
+    display: inline-block;
+    margin-right: 10px; /* Ajusta este valor según sea necesario para el espaciado deseado */
+}
+
+/* Estilos para el div de resultado */
+#resultado {
+    margin-top: 20px; /* Espacio entre el formulario y el resultado */
+    font-size: 24px; /* Tamaño de fuente para el resultado */
+    font-family: 'Honk', sans-serif;
+
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.menu:hover .dropdown-content {
+    display: block;
+}
+/* Estilos para el contenedor principal */
+.contact-container {
+    max-width: 800px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Estilos para la sección de información de contacto */
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info h2 {
+    margin-bottom: 24px; 
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: 5px; 
+    font-size: 16pt;
+    font-family: 'Radio Grotesk', sans-serif;
+}
+/* Estilos para el mapa */
+#map {
+    margin-bottom: 20px;
+}
+
+#map iframe {
+    width: 100%; /* Ancho completo */
+    height: 400px; /* Altura fija */
+}
+
+/* Estilos para el formulario de contacto */
+
+.sobre {
+    width: 100%;
+    height: 90%;
+    flex: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    margin-top: 80px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sobre p {
+    font-size: 14pt;
+    margin-top: 10pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sobre h1 {
+    text-shadow: 3px 3px 4px grey;
+    font-size: 28pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sobre h2 {
+    text-shadow: 3px 3px 4px grey;
+    font-size: 20;
+    margin-top: 15pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sobre h3 {
+    text-shadow: 3px 3px 4px grey;
+    font-size: 16pt;
+    margin-top: 15pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+    padding: 20px;
+}
+
+.conteudo {
+    font-family: Arial, sans-serif; /* Define o tipo de letra do conteúdo */
+}
+
+.contact-info {
+    font-size: 14px; /* Define o tamanho da letra do conteúdo */
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.social-media {
+    margin-top: 20px;
+    align-items: center;
+}
+
+.social-icon {
+    font-size: 36px;
+    margin-right: 10px;
+    text-decoration: azure;
+    color: #2f1cc6;
+
+}
+
+.social-icon:hover {
+    color: #007bff;
+}
+.rodape{
+    background-color: black;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000; 
+}
