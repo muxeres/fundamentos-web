@@ -1,21 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('El evento DOMContentLoaded se ha disparado correctamente.');
+    console.log('O evento DOMContentLoaded foi disparado corretamente.');
 
     // Función para mostrar alerta de bienvenida
     function mostrarAlertaBienvenida() {
-        console.log('Se hizo clic en el botón Home.');
-        alert('Bienvenidos!');
+        console.log('Foi acionado o botão Home.');
+        alert('Bem-Vindos!');
         cargarIndice();
     }
 
     // Función para cargar la página principal con el menú
     function cargarIndice() {
-        console.log('Cargando la página principal con el menú.');
+        console.log('Carregando menu da página principal.');
         document.getElementById('content').innerHTML = `
             <section class="menu">
                 <a href="calculadora.html" target="janela">Calculadora</a>
                 <a href="contador.html" target="janela">Contar</a>
-                <a href="fatorial.html" target="janela">Factorial</a>
+                <a href="fatorial.html" target="janela">Fatorial</a>
                 <a href="vetor.html" target="janela">Vetor</a>
             </section>
             <section class="conteudo">
@@ -26,13 +26,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función para manejar los botones About y Contact
     function manejarBotonAbout() {
-        console.log('Se hizo clic en el botón About.');
+        console.log('Foi acionado o botão About.');
         alert('Vamos falar de Nós!');
     }
 
     function manejarBotonContact() {
-        console.log('Se hizo clic en el botón Contact.');
-        alert('Fala Conosco!');
+        console.log('Foi acionado o botão Contact.');
+        alert('Fale Conosco!');
     }
 
     // Función para el cálculo de la calculadora
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Función para el contador
     function contarNumeros(event) {
         event.preventDefault();
-        console.log('El formulario de contador se ha enviado correctamente.');
+        console.log('O formulário do contador foi enviado corretamente.');
         let vezes = parseInt(document.querySelector('input[name="numero1"]').value);
         let incremento = parseInt(document.querySelector('input[name="numero2"]').value);
         let resultado = '';
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Función para el vector
     function obtenerNombrePorPosicion(event) {
         event.preventDefault();
-        console.log('El formulario de vector se ha enviado correctamente.');
+        console.log('O formulário do vetor foi enviado correctamente.');
         const nombres = [];
         for (let i = 1; i <= 4; i++) {
             nombres.push(document.querySelector(`input[name="nome${i}"]`).value);
@@ -120,10 +120,10 @@ document.addEventListener('DOMContentLoaded', function() {
         let posicion = parseInt(document.querySelector('input[name="posicao"]').value);
         if (posicion > 0 && posicion <= nombres.length) {
             posicion--;
-            console.log(`El nombre en la posición ${posicion + 1} es: ${nombres[posicion]}`);
+            console.log(`O nome na posição ${posicion + 1} é: ${nombres[posicion]}`);
             document.querySelector('#resultado').innerHTML = `<p>O nome na posição ${posicion + 1} é: ${nombres[posicion]}</p>`;
         } else {
-            console.log('La posición ingresada es inválida.');
+            console.log('A posição informada inválida.');
             document.querySelector('#resultado').innerHTML = `<p>Posição inválida</p>`;
         }
     }
